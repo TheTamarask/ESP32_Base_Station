@@ -5,10 +5,10 @@
 #include <Adafruit_BMP280.h>
 
 
-#define WIFI_SSID "2.4G-Vectra-WiFi-8FFD5A"
-//#define WIFI_SSID "Hotspot"
-#define WIFI_PASSWORD "9364C817ABBE3E49"
-//#define WIFI_PASSWORD "Hotspot1!"
+//#define WIFI_SSID "2.4G-Vectra-WiFi-8FFD5A"
+#define WIFI_SSID "Hotspot"
+//#define WIFI_PASSWORD "9364C817ABBE3E49"
+#define WIFI_PASSWORD "Hotspot1!"
 #define WRITE_API_KEY "PNHYZHY120FBZWPR"
 #define READ_API_KEY "EA45V91MO4WP7DAM"
 #define DEEP_SLEEP_S_MULTIPLIER 1000000
@@ -165,7 +165,7 @@ void WebServer()
     while (client.connected()) {  // loop while the client's connected
       if (client.available()) {             // if there's bytes to read from the client,
         char c = client.read();             // read a byte, then
-        Serial.write(c);                    // print it out the serial monitor
+        //Serial.write(c);                    // print it out the serial monitor
         header += c;
         if (c == '\n') {                    // if the byte is a newline character
           // if the current line is blank, you got two newline characters in a row.
